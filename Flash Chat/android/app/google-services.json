@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "247432691685",
+    "project_id": "flash-chat-b52f5",
+    "storage_bucket": "flash-chat-b52f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247432691685:android:40f419c06fd1ba5d55790c",
+        "android_client_info": {
+          "package_name": "com.Asser.my_flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247432691685-86k7dk6krat50sgfrs0hfgevlk7rcrp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIyDiWRlN6IENEJRGb6Taf7asG7aG0uNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247432691685-86k7dk6krat50sgfrs0hfgevlk7rcrp6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
