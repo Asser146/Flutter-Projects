@@ -38,51 +38,25 @@ class InputSheet extends StatelessWidget {
               ),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              TextButton(
-                onPressed: () {
-                  Provider.of<TasksList>(context,listen: false).clear();
-                  textFieldController.clear();
-                  Navigator.pop(context);
-                },
-                child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-                  color: Colors.blueAccent,
-                  child: const Center(
-                    child: Text(
-                      "New List",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
+          TextButton(
+            onPressed: () {
+              Provider.of<TasksList>(context,listen: false).addToList(Task(title: taskTitle));
+              textFieldController.clear();
+              Navigator.pop(context);
+            },
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+              color: Colors.blueAccent,
+              child: const Center(
+                child: Text(
+                  "Add",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
-              TextButton(
-                onPressed: () {
-                  Provider.of<TasksList>(context,listen: false).addToList(Task(title: taskTitle));
-                  textFieldController.clear();
-                  Navigator.pop(context);
-                },
-                child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
-                  color: Colors.blueAccent,
-                  child: const Center(
-                    child: Text(
-                      "Add",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-              ),
-
-            ],
+            ),
           )
         ],
       ),
