@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/tasks_screen.dart';
+import 'screens/week_screen.dart';
 import 'models/tasks_list.dart';
 import 'package:provider/provider.dart';
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => TasksList(),
       child: MaterialApp(
-        home: TasksScreen(),
+        home: WeekScreen(),
       ),
     );
   }

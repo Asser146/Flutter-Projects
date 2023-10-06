@@ -43,7 +43,29 @@ class NotificationsHandler extends StatelessWidget {
       },
     );
   }
-
+  Future<void> showFinishedWeek() async {
+    // loadSaveHandler
+    //     .saveData(Provider.of<TasksList>(context, listen: false).getTasks());
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: true,
+      builder: (BuildContext context) {
+        return CupertinoAlertDialog(
+          title:  Text('Congratulations 🎉!',style: notiTitleStyle(),),
+          content: Text("You finished another week!",style: optionsTitleStyle(),),
+          actions: <Widget>[
+            TextButton(
+              child:  Text('Done',style: optionsTitleStyle(),),
+              onPressed: () {
+                loadSaveHandler.createNewWeekList();
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
   Future<bool> checkToSave(bool status) async {
     if (status) {
       showDialog<void>(
@@ -93,7 +115,7 @@ class NotificationsHandler extends StatelessWidget {
             TextButton(
               child: const Text('OK'),
               onPressed: () {
-                loadSaveHandler.createNewList();
+                loadSaveHandler.createNewDayList();
                 Navigator.of(context).pop();
               },
             ),
